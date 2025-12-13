@@ -28,3 +28,9 @@ public class Program9 {
         }
     }
 }
+// op File Name: example.txt
+// Size:14 bytes
+
+// Last Modified:
+// Sat Dec 13 14:14:51 IST 2025 Type:
+// File

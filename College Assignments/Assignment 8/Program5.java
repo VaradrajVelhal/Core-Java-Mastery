@@ -18,9 +18,11 @@ class CheckingAccount extends Account {
 }
 
 class Program5 {
-     Account sa = new SavingsAccount();
+    public static void main(String args[]) {
+        Account sa = new SavingsAccount();
         Account ca = new CheckingAccount();
-        
+
         System.out.println("Savings Interest: " + sa.calculateInterest(1000));
         System.out.println("Checking Interest: " + ca.calculateInterest(1000));
+    }
 }

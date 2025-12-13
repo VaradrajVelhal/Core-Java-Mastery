@@ -1,26 +1,15 @@
-//Write a Java program to demonstrate that an abstract class can have a constructor.
-//Create an abstract class Person with a constructor and a subclass
-//Student that calls the superclass constructor.
-abstract class Person {
-    String name;
+//Write a Java program to create a package utilities and define two classes
+//Calculator and Converter in it. Use these classes in a main program to perform
+//various calculations and conversions.
 
-    // Abstract class constructor
-    Person(String name) {
-        this.name = name;
-        System.out.println("Person constructor running...");
-    }
-}
-
-class Student extends Person {
-    Student(String name) {
-        super(name);
-        System.out.println("Student constructor running...");
-    }
-}
+import utilities.*;
 
 class Program3 {
     public static void main(String[] args) {
-        Student s = new Student("Kamlesh");
-        System.out.println("Created student: " + s.name);
+        Calculator calc = new Calculator();
+        Converter conv = new Converter();
+
+        System.out.println("Sum: " + calc.add(10, 20));
+        System.out.println("30C in F: " + conv.cToF(30));
     }
 }

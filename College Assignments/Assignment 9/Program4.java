@@ -1,49 +1,16 @@
-//Write a Java program to create an abstract class Shape with a field color and
-//an abstract method calculateArea().Create subclasses Circle and Rectangle that 
-//provide concrete implementations for the abstract method.
-abstract class Shape {
-    String color;
+//Write a Java program to create nested packages org.example.project.models
+//and org.example.project.services. Create a class User in the models package
+//and a class UserService in the services package. Use UserService to perform
+//operations on User.
 
-    Shape(String color) {
-        this.color = color;
-    }
-
-    abstract double calculateArea();
-}
-
-class Circle extends Shape {
-    double r;
-
-    Circle(String color, double r) {
-        super(color);
-        this.r = r;
-    }
-
-    double calculateArea() {
-        return 3.14 * r * r;
-    }
-}
-
-class Rectangle extends Shape {
-    double l, w;
-
-    Rectangle(String color, double l, double w) {
-        super(color);
-        this.l = l;
-        this.w = w;
-    }
-
-    double calculateArea() {
-        return l * w;
-    }
-}
+import org.example.project.models.User;
+import org.example.project.services.UserService;
 
 class Program4 {
     public static void main(String[] args) {
-        Shape c = new Circle("Red", 5);
-        Shape r = new Rectangle("Blue", 4, 5);
+        User u = new User(1, "Alice");
+        UserService service = new UserService();
 
-        System.out.println(c.color + " Circle Area: " + c.calculateArea());
-        System.out.println(r.color + " Rect Area: " + r.calculateArea());
+        service.displayUser(u);
     }
 }

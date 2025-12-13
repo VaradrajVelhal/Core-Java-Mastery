@@ -18,3 +18,7 @@ public class program10 {
         }
     }
 }
+// op
+// roll,name
+// 1,Varadraj
+// 2,Ganesh
