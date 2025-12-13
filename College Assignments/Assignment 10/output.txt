@@ -1,0 +1,2 @@
+Hello! This is written using Java.
+BufferedWriter makes writing efficient.
