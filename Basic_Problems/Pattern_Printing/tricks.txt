@@ -1,9 +1,0 @@
-1. Run the outer for loop as many times you are having the lines.
-
-2. Outer for loop is for rows, Inner for loop is for columns.
-
-3. Identify for every row number
-   - How many columns are there ?
-   - Types of element in column ?
-
-4. What do you need to Print ?
