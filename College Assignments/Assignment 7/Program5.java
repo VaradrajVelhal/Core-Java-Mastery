@@ -1,6 +1,9 @@
 //WWrite a Java program to demonstrate exception propagation. Create a
 //method that throws an ArithmeticException, and another method that calls
 //this method and handles the exception.
+
+import Program_5.Program5;
+
 public class Program5 {
     void m() {
         int data = 50 / 0; // Throws ArithmeticException

@@ -1,24 +1,26 @@
-//Write a Java program to create an interface Calculator with a default method
-//add(int a, int b) and an abstract method multiply(int a, int b). Create a class
-//AdvancedCalculator that implements the interface and overrides the abstract method.
-interface Calculator {
-    default int add(int a, int b) {
-        return a + b;
-    }
+//Write a Java program to use an external package like java.util. Demonstrate
+//the usage of classes like ArrayList and HashMap from this package in your program.
 
-    int multiply(int a, int b);
-}
+import java.util.ArrayList;
+import java.util.HashMap;
 
-class AdvancedCalculator implements Calculator {
-    public int multiply(int a, int b) {
-        return a * b;
-    }
-}
-
-class Program9 {
+public class Program9 {
     public static void main(String[] args) {
-        AdvancedCalculator c = new AdvancedCalculator();
-        System.out.println("Add: " + c.add(10, 20));
-        System.out.println("Multiply: " + c.multiply(10, 20));
+        // 1. Using ArrayList (Dynamic Array)
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        System.out.println("ArrayList: " + list);
+        System.out.println("Item at index 1: " + list.get(1));
+
+        // 2. Using HashMap (Key-Value Store)
+        HashMap<String, Integer> ages = new HashMap<>();
+        ages.put("Alice", 25);
+        ages.put("Bob", 30);
+
+        System.out.println("\nHashMap: " + ages);
+        System.out.println("Alice's Age: " + ages.get("Alice"));
     }
 }

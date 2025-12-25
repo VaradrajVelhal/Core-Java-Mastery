@@ -1,41 +1,17 @@
-//Write a Java program to create an interface AnimalActions with methods eat()
-//and sleep(). Create classes Lion and Elephant that implement the interface and
-//provide concrete implementations for both methods.
-interface AnimalActions {
-    void eat();
+//Write a Java program to demonstrate how to handle naming conflicts when
+//two packages have classes with the same name. Create two packages, each
+//with a class named Utils, and show how to use both classes in the same program.
 
-    void sleep();
-}
+import packageA.Utils; // 1. Import one class normally
 
-class Lion implements AnimalActions {
-    public void eat() {
-        System.out.println("Lion eats meat");
-    }
-
-    public void sleep() {
-        System.out.println("Lion sleeps in den");
-    }
-}
-
-class Elephant implements AnimalActions {
-    public void eat() {
-        System.out.println("Elephant eats leaves");
-    }
-
-    public void sleep() {
-        System.out.println("Elephant sleeps standing");
-    }
-}
-
-class Program7 {
+public class Program7 {
     public static void main(String[] args) {
-        AnimalActions l = new Lion();
-        AnimalActions e = new Elephant();
+        // 2. Uses the imported 'packageA.Utils'
+        Utils u1 = new Utils();
+        u1.print();
 
-        l.eat();
-        l.sleep();
-
-        e.eat();
-        e.sleep();
+        // 3. Use the FULL name for the second class to avoid confusion
+        packageB.Utils u2 = new packageB.Utils();
+        u2.print();
     }
 }

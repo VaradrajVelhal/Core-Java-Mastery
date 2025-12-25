@@ -1,0 +1,1 @@
+Write a Java program to use java.nio.file package to read the contents of a file named sample.txt using Files.readAllLines(). Print the contents to the console.

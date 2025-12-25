@@ -1,27 +1,15 @@
-//Write a Java program to create an interface Playable with a method play().
-//Create two classes, Music and Video, that implement the Playable interface
-//and provide concrete implementations of the play() method.
-interface Playable {
-    void play();
-}
+//Write a Java program to demonstrate the use of static import. Create a class
+//MathOperations with static methods add(), subtract(), and multiply(). Use
+//static import to access these methods in another class without using the class name.
 
-class Music implements Playable {
-    public void play() {
-        System.out.println("Playing song...");
-    }
-}
+// The 'static' keyword here is the magic sauce
+import static myutils.MathOperations.*;
 
-class Video implements Playable {
-    public void play() {
-        System.out.println("Playing movie...");
-    }
-}
-
-class Program6 {
+public class Program6 {
     public static void main(String[] args) {
-        Playable m = new Music();
-        Playable v = new Video();
-        m.play();
-        v.play();
+        // No need to write MathOperations.add()
+        System.out.println("Add: " + add(20, 10));
+        System.out.println("Sub: " + subtract(20, 10));
+        System.out.println("Mul: " + multiply(20, 10));
     }
 }

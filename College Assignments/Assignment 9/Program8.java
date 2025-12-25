@@ -1,28 +1,19 @@
-//Write a Java program to create two interfaces, Flyable and Swimmable, with
-//methods fly() and swim() respectively. Create a class Duck that implements
-//both interfaces and provides concrete implementations.
-interface Flyable {
-    void fly();
-}
+//Write a Java program to create a package banking and define an interface
+//BankAccount with methods deposit(), withdraw(), and getBalance().
+//Implement this interface in two classes SavingsAccount and CheckingAccount.
 
-interface Swimmable {
-    void swim();
-}
+import banking.*;
 
-class Duck implements Flyable, Swimmable {
-    public void fly() {
-        System.out.println("Duck flies");
-    }
-
-    public void swim() {
-        System.out.println("Duck swims");
-    }
-}
-
-class Program8 {
+public class Program8 {
     public static void main(String[] args) {
-        Duck d = new Duck();
-        d.fly();
-        d.swim();
+        BankAccount s = new SavingsAccount();
+        s.deposit(1000);
+        s.withdraw(200);
+        System.out.println("Savings Balance: " + s.getBalance());
+
+        BankAccount c = new CheckingAccount();
+        c.deposit(500);
+        c.withdraw(600); // Checking might allow negative
+        System.out.println("Checking Balance: " + c.getBalance());
     }
 }
