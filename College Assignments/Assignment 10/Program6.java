@@ -15,4 +15,3 @@ public class Program6 {
         }
     }
 }
-// Failed to delete (file might not exist)

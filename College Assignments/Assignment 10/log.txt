@@ -1,2 +1,5 @@
  - New log entry added.
  - New log entry added.
+-appending this text to file
+-done with appending.-appending this text to file
+-done with appending.

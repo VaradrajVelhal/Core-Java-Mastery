@@ -3,25 +3,20 @@
 //print it to the console. Use FileReader and BufferedReader to perform the
 //read operation.
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class Program2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try {
-            // Create reader buffer
-            BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
-
+            BufferedReader br = new BufferedReader(new FileReader("input.txt"));
             String line;
-            // Loop through the file line by line
-            while ((line = reader.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
 
-            reader.close();
-        } catch (IOException e) {
-            System.out.println("Error: File not found or couldn't be read.");
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
         }
     }
 }
-// output - Varadraj Velhal

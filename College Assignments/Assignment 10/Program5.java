@@ -5,16 +5,11 @@ import java.io.File;
 
 public class Program5 {
     public static void main(String[] args) {
-        // Create a File object (does not create the file on disk, just the link)
-        File file = new File("data.txt");
-
-        // Check if it actually exists
-        if (file.exists()) {
-            System.out.println("File exists!");
-            System.out.println("Path: " + file.getAbsolutePath());
+        File f = new File("source.txt");
+        if (f.exists()) {
+            System.out.println("file exists " + f.getAbsolutePath());
         } else {
-            System.out.println("File does not exist.");
+            System.out.println("file not found.");
         }
     }
 }
-// File does not exist.

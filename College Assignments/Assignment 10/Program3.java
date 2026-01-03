@@ -4,22 +4,14 @@
 //of text.
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class Program3 {
-    public static void main(String[] args) {
-        try {
-            // The 'true' argument enables append mode
-            BufferedWriter writer = new BufferedWriter(new FileWriter("log.txt", true));
-
-            writer.write(" - New log entry added.");
-            writer.newLine(); // Move to next line
-
-            writer.close();
-            System.out.println("Text appended successfully.");
-        } catch (IOException e) {
-            System.out.println("Error appending to file.");
-        }
+    public static void main(String[] args) throws Exception {
+        BufferedWriter bw = new BufferedWriter(new FileWriter("log.txt", true));
+        bw.append("-appending this text to file");
+        bw.newLine();
+        bw.append("-done with appending.");
+        bw.close();
+        System.out.println("sucessful..");
     }
 }
-// op Text appended successfully.
