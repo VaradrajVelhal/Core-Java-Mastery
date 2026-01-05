@@ -12,18 +12,12 @@ class Person implements Serializable {
 public class Program2 {
     public static void main(String[] args) {
         // We use try-with-resources to close the stream automatically
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("person.ser"))) {
-
-            // Read object and cast it back to Person
-            Person p = (Person) in.readObject();
-
-            System.out.println("Name: " + p.name);
-            System.out.println("Age: " + p.age);
-
-        } catch (FileNotFoundException e) {
-            System.out.println("File 'person.ser' not found. Serialize an object first!");
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error: " + e);
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.ser"))) {
+            Person p = (Person) ois.readObject();
+            System.out.println(p.age);
+            System.out.println(p.name);
+        } catch (Exception e) {
+            System.out.println("error occured...." + e);
         }
     }
 }
